@@ -8,10 +8,10 @@ const schema = buildSchema(`
     price: Int
     email: String
     language: String
-    teachingAssits: [TeachingAssistInput]
+    teachingAssits: [TeachingAssist]
   }
 
-  type TeachingAssistInput {
+  type TeachingAssist {
     id: ID
     firstName: String
     lastName: String
@@ -33,9 +33,10 @@ const schema = buildSchema(`
     courseName: String!
     category: String
     price: Int!
+    stack: [Stack]
     email: String!
     language: String
-    teachingAssits: [TeachingAssistInput]!
+    teachingAssits: [TeachingAssistInput]
   }
 
   input TeachingAssistInput {

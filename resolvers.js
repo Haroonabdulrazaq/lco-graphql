@@ -17,7 +17,7 @@ class Course{
 
 const courseholder = {}
 
-const resolvers = {
+let resolvers = {
   getCourse: ({id}) => {
     return new Course(id, courseholder[id])
   },
